@@ -25,7 +25,7 @@ This app processes unsearchable or image PDFs using OCR (Optical Character Recog
 
 ## Usage
 
-1. Install Python dependencies: `pip install ocrmypdf pikepdf`
+1. Install Python dependencies: `pip install ocrmypdf pikepdf pypdfium2`
 2. Install Tesseract and ensure it is on the system PATH
 3. Run the app: `python pdfocr.py`
 4. Select an input folder containing PDFs and an output folder for the results
