@@ -16,11 +16,12 @@ This app processes unsearchable or image PDFs using OCR (Optical Character Recog
 ## Dependencies
 
 ### Python packages
-- [ocrmypdf](https://github.com/ocrmypdf/OCRmyPDF) — core OCR engine and PDF processing
-- [pikepdf](https://github.com/pikepdf/pikepdf) — reads PDF page counts
+- [ocrmypdf](https://github.com/ocrmypdf/OCRmyPDF) core OCR engine and PDF processing
+- [pikepdf](https://github.com/pikepdf/pikepdf) reads PDF page counts
+- [pypdfium2](https://github.com/pypdfium2-team/pypdfium2) handles pdf rendering
 
 ### System dependencies
-- [Tesseract OCR](https://github.com/tesseract-ocr/tesseract) — text recognition engine
+- [Tesseract OCR](https://github.com/tesseract-ocr/tesseract) text recognition engine
 
 ## Usage
 
