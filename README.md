@@ -21,12 +21,11 @@ This app processes unsearchable or image PDFs using OCR (Optical Character Recog
 
 ### System dependencies
 - [Tesseract OCR](https://github.com/tesseract-ocr/tesseract) — text recognition engine
-- [Ghostscript](https://www.ghostscript.com/) — PDF rendering and assembly
 
 ## Usage
 
 1. Install Python dependencies: `pip install ocrmypdf pikepdf`
-2. Install Tesseract and Ghostscript and ensure both are on your system PATH
+2. Install Tesseract and ensure it is on the system PATH
 3. Run the app: `python pdfocr.py`
 4. Select an input folder containing PDFs and an output folder for the results
 5. Set your preferred thread limit and click Run OCR
