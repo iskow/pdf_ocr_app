@@ -4,7 +4,7 @@ A lightweight desktop application that adds a searchable text layer to scanned o
 
 ## What it does
 
-Scanned PDFs look like documents but are really just images — you can't search, copy, or select text from them. This app processes those PDFs using OCR (Optical Character Recognition) and produces a new PDF with a hidden text layer, making the content fully searchable without changing how it looks.
+This app processes unsearchable or image PDFs using OCR (Optical Character Recognition) and produces a new PDF with a hidden text layer, making the content fully searchable without changing how it looks.
 
 ## Features
 
@@ -31,6 +31,3 @@ Scanned PDFs look like documents but are really just images — you can't search
 4. Select an input folder containing PDFs and an output folder for the results
 5. Set your preferred thread limit and click Run OCR
 
-## License
-
-See LICENSE.md
