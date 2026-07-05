@@ -75,11 +75,17 @@ def startocr():
         activethreads = threading.Semaphore(max_threads.get())
         page_lock = threading.Lock()
         total_pages = 0
-        log_path = os.path.join(output_folder.get(), "ocr_errors.log")
-        pdf_files = [f for f in os.listdir(input_folder.get()) if f.endswith('.pdf')]
+        pdf_files = []
+        for folderpath, subfolders, filenames in os.walk(input_folder.get()):
+            for filename in filenames:
+                if filename.endswith('.pdf'):
+                    full_path = os.path.join(folderpath, filename)
+                    rel_path = os.path.relpath(full_path, input_folder.get())
+                    pdf_files.append(rel_path)
         total_files = len(pdf_files)
         progress['maximum'] = total_files
         progress['value'] = 0
+        log_path = os.path.join(output_folder.get(), "ocr_errors.log")
 
         #OCR loop for each pdf file
         def process_file(filename): 
@@ -102,6 +108,7 @@ def startocr():
                             log.write(f"Skipped - PDF with Digital Signature: {filename}\n")
                         return
 
+                os.makedirs(os.path.dirname(output_path), exist_ok=True)
 
                 try:
                     #timeout is 900sec or 15min - we can set to 0 for no timeout, deskew to straighten pages - pdfs with partial text are skipped
